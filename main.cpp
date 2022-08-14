@@ -3,9 +3,12 @@
 #include <ctime>
 using namespace std;
 //Constants
-#define MAPA 4
+#define MAPA 6
 //Functions
 void four_colors(short pMatriz[MAPA][MAPA]){
+    //Funcon para definir los colores de las regiones de un mapa solo utilizando 4 colores.
+    //Parámetros: short pMatriz[X][Y]. Matriz 2D de tipo Short, representa una matriz de relaciones.
+    //Retorna: Void
     bool posible=true;
     short colores[MAPA];
     colores[0]=1;
@@ -61,10 +64,12 @@ void matriz_automatica(){
 }
 int main() {
    /* short matrizr[MAPA][MAPA]={
-            {0,0,0,0},
-            {1,0,0,0},
-            {1,1,0,0},
-            {0,1,1,0}
+            {0,0,0,0,0,0},
+            {1,0,0,0,0,0},
+            {1,1,0,0,0,0},
+            {0,1,1,0,0,0}
+            {0,1,1,0,0,0}
+            {0,1,1,0,0,0}
     };
     four_colors(matrizr);*/
     matriz_automatica();
