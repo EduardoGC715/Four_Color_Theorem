@@ -1,3 +1,4 @@
+//Elaborado por Eduardo Gutierrez
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
