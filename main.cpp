@@ -2,10 +2,8 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-
 //Constants
 #define MAPA 4
-
 //Functions
 void four_colors(short pMatriz[MAPA][MAPA]){
     bool posible=true;
@@ -15,9 +13,9 @@ void four_colors(short pMatriz[MAPA][MAPA]){
         int col = 1;
         for (int y=0;y<MAPA;y++){
             if (pMatriz[x][y]==1) {
-                for (; col <5;col++){
+                for (;col<5;col++){
                     colores[x]=col;
-                    if (colores[y] != colores[x]) {
+                    if (colores[y]!=colores[x]){
                         break;
                     }
                     else if(colores[y]==colores[x] && col==4){
@@ -33,14 +31,13 @@ void four_colors(short pMatriz[MAPA][MAPA]){
     if(posible){
         cout<<"Si es posible aplicar el teorema.\n";
         for (int i=0; i<MAPA; i++){
-            cout<<i+1<<" es de color "<<colores[i]<<"\n";
+            cout<<i+1<<" es de color "<<colores[i]<<endl;
         }
     }
     else{
         cout<<"No es posible aplicar el teorema."<<endl;
     }
 }
-
 void matriz_automatica(){
     short matrizr[MAPA][MAPA];
     srand (time(NULL));
@@ -62,7 +59,6 @@ void matriz_automatica(){
     }
     four_colors(matrizr);
 }
-
 int main() {
    /* short matrizr[MAPA][MAPA]={
             {0,0,0,0},
